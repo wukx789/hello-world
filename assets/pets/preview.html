@@ -14,7 +14,6 @@
       --ink: #2a3a36;
       --muted: #5c6f68;
       --accent: #e07a5f;
-      --card-gap: 1.25rem;
     }
     * { box-sizing: border-box; }
     body {
@@ -36,18 +35,16 @@
       font-family: "ZCOOL KuaiLe", "Nunito", sans-serif;
       font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 400;
-      letter-spacing: 0.02em;
     }
     header p {
       margin: 0.6rem auto 0;
       max-width: 28rem;
       color: var(--muted);
-      font-size: 1rem;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: var(--card-gap);
+      gap: 1.25rem;
       padding: 1.5rem clamp(1rem, 4vw, 3rem) 3rem;
       max-width: 1100px;
       margin: 0 auto;
@@ -87,99 +84,23 @@
       color: var(--muted);
       line-height: 1.4;
     }
-    .stages {
-      margin-top: 2rem;
-      padding: 0 clamp(1rem, 4vw, 3rem) 3rem;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .stages h2 {
-      font-family: "ZCOOL KuaiLe", "Nunito", sans-serif;
-      font-weight: 400;
-      font-size: 1.5rem;
-    }
-    .stage-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    @media (max-width: 700px) {
-      .stage-row { grid-template-columns: 1fr; }
-    }
-    .stage-row figure {
-      margin: 0;
-      text-align: center;
-    }
-    .stage-row img {
-      width: 100%;
-      max-width: 260px;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 1rem;
-      background: #fff;
-    }
-    .stage-row figcaption {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>英语打卡 · 宠物图鉴</h1>
-    <p>六只陪伴打卡的小伙伴。打卡攒 XP，宠物会升级变装。</p>
+    <p>小狗、紫蛇、粉兔、小鸡仔、白猫 —— 打卡攒 XP，一起升级。</p>
   </header>
-
   <section class="grid" id="roster" aria-label="宠物名单"></section>
-
-  <section class="stages">
-    <h2>升级示例 · 小焰 Ember</h2>
-    <div class="stage-row">
-      <figure>
-        <img src="pet-ember-fox.jpg" alt="小焰 幼狐" />
-        <figcaption>Lv.1 幼狐</figcaption>
-      </figure>
-      <figure>
-        <img src="pet-ember-fox-stage2.jpg" alt="小焰 学徒狐" />
-        <figcaption>Lv.2 学徒狐</figcaption>
-      </figure>
-      <figure>
-        <img src="pet-ember-fox-stage3.jpg" alt="小焰 星焰狐" />
-        <figcaption>Lv.3 星焰狐</figcaption>
-      </figure>
-    </div>
-
-    <h2 style="margin-top:2rem">升级示例 · 麻糬 Mochi</h2>
-    <div class="stage-row">
-      <figure>
-        <img src="pet-mochi-cat.jpg" alt="麻糬 团子猫" />
-        <figcaption>Lv.1 团子猫</figcaption>
-      </figure>
-      <figure>
-        <img src="pet-mochi-cat-stage2.jpg" alt="麻糬 眼镜猫" />
-        <figcaption>Lv.2 眼镜猫</figcaption>
-      </figure>
-      <figure>
-        <img src="pet-mochi-cat-stage3.jpg" alt="麻糬 叶冠猫" />
-        <figcaption>Lv.3 叶冠猫</figcaption>
-      </figure>
-    </div>
-  </section>
-
   <script>
     const pets = [
-      { img: "pet-ember-fox.jpg", zh: "小焰", en: "Ember · 单词狐", tag: "记一个词，尾巴就多一分暖意。" },
-      { img: "pet-mochi-cat.jpg", zh: "麻糬", en: "Mochi · 语法猫", tag: "把句子揉得软软的，再慢慢排整齐。" },
-      { img: "pet-pip-sparrow.jpg", zh: "吱吱", en: "Pip · 听力雀", tag: "小声听世界，大声记英语。" },
-      { img: "pet-bun-rabbit.jpg", zh: "团团", en: "Bun · 口语兔", tag: "开口不怕羞，耳朵帮你记节奏。" },
-      { img: "pet-pebble-penguin.jpg", zh: "鹅卵", en: "Pebble · 打卡企鹅", tag: "今天也来报到啦，一步一步不掉队。" },
-      { img: "pet-coco-bear.jpg", zh: "可可", en: "Coco · 记忆熊", tag: "忘了也没关系，我帮你抱抱再记一次。" }
+      { img: "pet-puppy.jpg", zh: "旺仔", en: "Sunny · 打卡小狗", tag: "摇摇尾巴来报到，今天也一起学英语！" },
+      { img: "pet-purple-snake.jpg", zh: "紫紫", en: "Violet · 词汇小蛇", tag: "把生词一圈圈缠牢，就不会溜走啦。" },
+      { img: "pet-pink-bunny.jpg", zh: "桃桃", en: "Peach · 口语粉兔", tag: "粉粉耳朵竖起来，开口练习不怕羞。" },
+      { img: "pet-chick.jpg", zh: "叽叽", en: "Chirp · 听力小鸡", tag: "小小耳朵竖起来，英语一点一点听进心。" },
+      { img: "pet-white-kitten.jpg", zh: "雪团", en: "Snow · 语法白猫", tag: "把句子揉得软软的，再慢慢排整齐。" }
     ];
-    const root = document.getElementById("roster");
-    root.innerHTML = pets.map((p) => `
+    document.getElementById("roster").innerHTML = pets.map((p) => `
       <article>
         <img src="${p.img}" alt="${p.zh}" loading="lazy" />
         <h2>${p.zh}</h2>
