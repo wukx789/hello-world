@@ -89,16 +89,17 @@
 <body>
   <header>
     <h1>英语打卡 · 宠物图鉴</h1>
-    <p>小狗、紫蛇、粉兔、小鸡仔、白猫 —— 打卡攒 XP，一起升级。</p>
+    <p>中华田园犬、紫蛇、粉兔、小鸡仔、白猫、仓鼠 —— 打卡攒 XP，一起升级。</p>
   </header>
   <section class="grid" id="roster" aria-label="宠物名单"></section>
   <script>
     const pets = [
-      { img: "pet-puppy.jpg", zh: "旺仔", en: "Sunny · 打卡小狗", tag: "摇摇尾巴来报到，今天也一起学英语！" },
+      { img: "pet-chinese-dog.jpg", zh: "大黄", en: "Huang · 中华田园犬", tag: "村里最勤快的打卡搭子，竖起耳朵就来学英语！" },
       { img: "pet-purple-snake.jpg", zh: "紫紫", en: "Violet · 词汇小蛇", tag: "把生词一圈圈缠牢，就不会溜走啦。" },
       { img: "pet-pink-bunny.jpg", zh: "桃桃", en: "Peach · 口语粉兔", tag: "粉粉耳朵竖起来，开口练习不怕羞。" },
       { img: "pet-chick.jpg", zh: "叽叽", en: "Chirp · 听力小鸡", tag: "小小耳朵竖起来，英语一点一点听进心。" },
-      { img: "pet-white-kitten.jpg", zh: "雪团", en: "Snow · 语法白猫", tag: "把句子揉得软软的，再慢慢排整齐。" }
+      { img: "pet-white-kitten.jpg", zh: "雪团", en: "Snow · 语法白猫", tag: "把句子揉得软软的，再慢慢排整齐。" },
+      { img: "pet-hamster.jpg", zh: "豆豆", en: "Nibble · 记忆仓鼠", tag: "把单词塞进腮帮子，慢慢嚼、慢慢记。" }
     ];
     document.getElementById("roster").innerHTML = pets.map((p) => `
       <article>

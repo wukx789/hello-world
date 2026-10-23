@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "theme": {
     "style": "soft-pastel-chibi",
     "notes": "统一圆润 Q 版插画；打卡获得 XP，累计后切换 stage 形象"
@@ -13,43 +13,43 @@
   },
   "pets": [
     {
-      "id": "sunny-puppy",
-      "nameZh": "旺仔",
-      "nameEn": "Sunny",
-      "speciesZh": "打卡小狗",
-      "speciesEn": "Check-in Puppy",
-      "taglineZh": "摇摇尾巴来报到，今天也一起学英语！",
-      "taglineEn": "Tail wags for every check-in — let's learn together!",
+      "id": "tugou-dog",
+      "nameZh": "大黄",
+      "nameEn": "Huang",
+      "speciesZh": "中华田园犬",
+      "speciesEn": "Chinese Rural Dog",
+      "taglineZh": "村里最勤快的打卡搭子，竖起耳朵就来学英语！",
+      "taglineEn": "The village's most loyal study buddy — ears up for English!",
       "skillFocus": "habit",
       "rarity": "starter",
       "unlockCheckIns": 0,
-      "personality": ["loyal", "cheerful"],
+      "personality": ["loyal", "spirited"],
       "stages": [
         {
           "level": 1,
-          "titleZh": "幼犬",
-          "titleEn": "Pup",
+          "titleZh": "小土狗",
+          "titleEn": "Village Pup",
           "xpRequired": 0,
-          "image": "assets/pets/pet-puppy.jpg",
+          "image": "assets/pets/pet-chinese-dog.jpg",
           "perkZh": "每日打卡更有陪伴感",
           "perkEn": "Companion feel for daily check-ins"
         },
         {
           "level": 2,
-          "titleZh": "学伴犬",
-          "titleEn": "Study Buddy",
+          "titleZh": "看家犬",
+          "titleEn": "Yard Guard",
           "xpRequired": 200,
-          "image": "assets/pets/pet-puppy.jpg",
+          "image": "assets/pets/pet-chinese-dog.jpg",
           "perkZh": "连续打卡 XP +10%",
           "perkEn": "+10% XP on streak days",
           "artStatus": "placeholder_reuse_base"
         },
         {
           "level": 3,
-          "titleZh": "金牌犬",
-          "titleEn": "Gold Collar",
+          "titleZh": "金牌田园",
+          "titleEn": "Gold Yard Dog",
           "xpRequired": 600,
-          "image": "assets/pets/pet-puppy.jpg",
+          "image": "assets/pets/pet-chinese-dog.jpg",
           "perkZh": "可冻结 1 次打卡中断",
           "perkEn": "Freeze one missed check-in",
           "artStatus": "placeholder_reuse_base"
@@ -228,6 +228,50 @@
           "image": "assets/pets/pet-white-kitten.jpg",
           "perkZh": "长句练习额外奖励",
           "perkEn": "Bonus XP for long-sentence practice",
+          "artStatus": "placeholder_reuse_base"
+        }
+      ]
+    },
+    {
+      "id": "nibble-hamster",
+      "nameZh": "豆豆",
+      "nameEn": "Nibble",
+      "speciesZh": "记忆仓鼠",
+      "speciesEn": "Memory Hamster",
+      "taglineZh": "把单词塞进腮帮子，慢慢嚼、慢慢记。",
+      "taglineEn": "I stuff words in my cheeks and chew them into memory.",
+      "skillFocus": "retention",
+      "rarity": "common",
+      "unlockCheckIns": 10,
+      "personality": ["busy", "patient"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "小仓鼠",
+          "titleEn": "Lil Hamster",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-hamster.jpg",
+          "perkZh": "错词本复习更安心",
+          "perkEn": "Softer revisit of missed words"
+        },
+        {
+          "level": 2,
+          "titleZh": "囤词鼠",
+          "titleEn": "Word Hoarder",
+          "xpRequired": 260,
+          "image": "assets/pets/pet-hamster.jpg",
+          "perkZh": "复习 XP +15%",
+          "perkEn": "+15% XP from reviews",
+          "artStatus": "placeholder_reuse_base"
+        },
+        {
+          "level": 3,
+          "titleZh": "长忆鼠",
+          "titleEn": "Long Memory",
+          "xpRequired": 750,
+          "image": "assets/pets/pet-hamster.jpg",
+          "perkZh": "间隔复习提醒更智能",
+          "perkEn": "Smarter spaced-repetition nudges",
           "artStatus": "placeholder_reuse_base"
         }
       ]
