@@ -56,6 +56,7 @@
           "titleEn": "Juvenile",
           "xpRequired": 120,
           "image": "assets/pets/pet-chinese-dog-s3-grow.jpg",
+          "visualNoteZh": "圆滚幼犬、软耳下垂、无配饰",
           "perkZh": "连续打卡 XP +5%",
           "perkEn": "+5% XP on streak days"
         },
@@ -65,6 +66,7 @@
           "titleEn": "Teen",
           "xpRequired": 280,
           "image": "assets/pets/pet-chinese-dog-s4-teen.jpg",
+          "visualNoteZh": "站立抬爪、竖耳卷尾、青色围巾",
           "perkZh": "连续打卡 XP +10%",
           "perkEn": "+10% XP on streak days"
         },
@@ -74,6 +76,7 @@
           "titleEn": "Adult",
           "xpRequired": 560,
           "image": "assets/pets/pet-chinese-dog-s5-adult.jpg",
+          "visualNoteZh": "体型更大、红项圈金星徽章",
           "perkZh": "可冻结 1 次打卡中断",
           "perkEn": "Freeze one missed check-in"
         }
