@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "theme": {
+    "style": "soft-pastel-chibi",
+    "notes": "统一圆润 Q 版插画；打卡获得 XP，累计后切换 stage 形象"
+  },
+  "xpRules": {
+    "checkInDaily": 20,
+    "streakBonusPerDay": 5,
+    "streakBonusCap": 50,
+    "vocabReview": 5,
+    "speakingPractice": 10
+  },
+  "pets": [
+    {
+      "id": "ember-fox",
+      "nameZh": "小焰",
+      "nameEn": "Ember",
+      "speciesZh": "单词狐",
+      "speciesEn": "Word Fox",
+      "taglineZh": "记一个词，尾巴就多一分暖意。",
+      "taglineEn": "Every new word warms my fluffy tail.",
+      "skillFocus": "vocabulary",
+      "rarity": "starter",
+      "unlockCheckIns": 0,
+      "personality": ["curious", "cheerful"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "幼狐",
+          "titleEn": "Cub",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-ember-fox.jpg",
+          "perkZh": "每日打卡提醒更温柔",
+          "perkEn": "Gentle daily check-in nudges"
+        },
+        {
+          "level": 2,
+          "titleZh": "学徒狐",
+          "titleEn": "Scholar Pup",
+          "xpRequired": 200,
+          "image": "assets/pets/pet-ember-fox-stage2.jpg",
+          "perkZh": "词汇复习 XP +10%",
+          "perkEn": "+10% XP from vocab reviews"
+        },
+        {
+          "level": 3,
+          "titleZh": "星焰狐",
+          "titleEn": "Star Ember",
+          "xpRequired": 600,
+          "image": "assets/pets/pet-ember-fox-stage3.jpg",
+          "perkZh": "连续打卡奖励翻倍上限提高",
+          "perkEn": "Higher streak bonus cap"
+        }
+      ]
+    },
+    {
+      "id": "mochi-cat",
+      "nameZh": "麻糬",
+      "nameEn": "Mochi",
+      "speciesZh": "语法猫",
+      "speciesEn": "Grammar Cat",
+      "taglineZh": "把句子揉得软软的，再慢慢排整齐。",
+      "taglineEn": "I knead sentences until they feel just right.",
+      "skillFocus": "grammar",
+      "rarity": "starter",
+      "unlockCheckIns": 0,
+      "personality": ["calm", "clever"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "团子猫",
+          "titleEn": "Loaf Kitten",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-mochi-cat.jpg",
+          "perkZh": "语法纠错提示更友好",
+          "perkEn": "Friendlier grammar tips"
+        },
+        {
+          "level": 2,
+          "titleZh": "眼镜猫",
+          "titleEn": "Spectacles Cat",
+          "xpRequired": 200,
+          "image": "assets/pets/pet-mochi-cat-stage2.jpg",
+          "perkZh": "语法练习 XP +10%",
+          "perkEn": "+10% XP from grammar drills"
+        },
+        {
+          "level": 3,
+          "titleZh": "叶冠猫",
+          "titleEn": "Leaf Crown Cat",
+          "xpRequired": 600,
+          "image": "assets/pets/pet-mochi-cat-stage3.jpg",
+          "perkZh": "长句练习额外奖励",
+          "perkEn": "Bonus XP for long-sentence practice"
+        }
+      ]
+    },
+    {
+      "id": "pip-sparrow",
+      "nameZh": "吱吱",
+      "nameEn": "Pip",
+      "speciesZh": "听力雀",
+      "speciesEn": "Listen Sparrow",
+      "taglineZh": "小声听世界，大声记英语。",
+      "taglineEn": "Tiny ears, big listening wins.",
+      "skillFocus": "listening",
+      "rarity": "common",
+      "unlockCheckIns": 3,
+      "personality": ["lively", "attentive"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "啾啾雏",
+          "titleEn": "Chirp Chick",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-pip-sparrow.jpg",
+          "perkZh": "短听力打卡更轻快",
+          "perkEn": "Quick listening check-ins"
+        },
+        {
+          "level": 2,
+          "titleZh": "跃听雀",
+          "titleEn": "Hop Listener",
+          "xpRequired": 220,
+          "image": "assets/pets/pet-pip-sparrow.jpg",
+          "perkZh": "听力练习 XP +10%",
+          "perkEn": "+10% XP from listening",
+          "artStatus": "placeholder_reuse_base"
+        },
+        {
+          "level": 3,
+          "titleZh": "风语雀",
+          "titleEn": "Wind Song",
+          "xpRequired": 650,
+          "image": "assets/pets/pet-pip-sparrow.jpg",
+          "perkZh": "听写正确率奖励提升",
+          "perkEn": "Better dictation accuracy bonus",
+          "artStatus": "placeholder_reuse_base"
+        }
+      ]
+    },
+    {
+      "id": "bun-rabbit",
+      "nameZh": "团团",
+      "nameEn": "Bun",
+      "speciesZh": "口语兔",
+      "speciesEn": "Speak Bunny",
+      "taglineZh": "开口不怕羞，耳朵帮你记节奏。",
+      "taglineEn": "Say it out loud — my ears keep the rhythm.",
+      "skillFocus": "speaking",
+      "rarity": "common",
+      "unlockCheckIns": 5,
+      "personality": ["brave", "playful"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "笔记兔",
+          "titleEn": "Notebook Bun",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-bun-rabbit.jpg",
+          "perkZh": "口语跟读更有陪伴感",
+          "perkEn": "Companion feel for speaking drills"
+        },
+        {
+          "level": 2,
+          "titleZh": "朗读者",
+          "titleEn": "Reader Bun",
+          "xpRequired": 220,
+          "image": "assets/pets/pet-bun-rabbit.jpg",
+          "perkZh": "口语练习 XP +10%",
+          "perkEn": "+10% XP from speaking",
+          "artStatus": "placeholder_reuse_base"
+        },
+        {
+          "level": 3,
+          "titleZh": "舞台兔",
+          "titleEn": "Stage Bun",
+          "xpRequired": 650,
+          "image": "assets/pets/pet-bun-rabbit.jpg",
+          "perkZh": "连续开口打卡额外徽章",
+          "perkEn": "Streak badge for speaking days",
+          "artStatus": "placeholder_reuse_base"
+        }
+      ]
+    },
+    {
+      "id": "pebble-penguin",
+      "nameZh": "鹅卵",
+      "nameEn": "Pebble",
+      "speciesZh": "打卡企鹅",
+      "speciesEn": "Check-in Penguin",
+      "taglineZh": "今天也来报到啦，一步一步不掉队。",
+      "taglineEn": "Present and proud — one day at a time.",
+      "skillFocus": "habit",
+      "rarity": "common",
+      "unlockCheckIns": 7,
+      "personality": ["steady", "loyal"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "报到鹅",
+          "titleEn": "Roll Call",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-pebble-penguin.jpg",
+          "perkZh": "连续打卡不易中断",
+          "perkEn": "Streak protection nudge"
+        },
+        {
+          "level": 2,
+          "titleZh": "守约鹅",
+          "titleEn": "Promise Keeper",
+          "xpRequired": 240,
+          "image": "assets/pets/pet-pebble-penguin.jpg",
+          "perkZh": "连续打卡 XP +15%",
+          "perkEn": "+15% XP on streak days",
+          "artStatus": "placeholder_reuse_base"
+        },
+        {
+          "level": 3,
+          "titleZh": "极光鹅",
+          "titleEn": "Aurora Pebble",
+          "xpRequired": 700,
+          "image": "assets/pets/pet-pebble-penguin.jpg",
+          "perkZh": "可冻结 1 次打卡中断",
+          "perkEn": "Freeze one missed check-in",
+          "artStatus": "placeholder_reuse_base"
+        }
+      ]
+    },
+    {
+      "id": "coco-bear",
+      "nameZh": "可可",
+      "nameEn": "Coco",
+      "speciesZh": "记忆熊",
+      "speciesEn": "Memory Bear",
+      "taglineZh": "忘了也没关系，我帮你抱抱再记一次。",
+      "taglineEn": "Forgot a word? We'll hug it back into memory.",
+      "skillFocus": "retention",
+      "rarity": "rare",
+      "unlockCheckIns": 14,
+      "personality": ["gentle", "patient"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "围巾熊",
+          "titleEn": "Scarf Cub",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-coco-bear.jpg",
+          "perkZh": "错词本复习更安心",
+          "perkEn": "Softer revisit of missed words"
+        },
+        {
+          "level": 2,
+          "titleZh": "温习熊",
+          "titleEn": "Review Bear",
+          "xpRequired": 260,
+          "image": "assets/pets/pet-coco-bear.jpg",
+          "perkZh": "复习 XP +15%",
+          "perkEn": "+15% XP from reviews",
+          "artStatus": "placeholder_reuse_base"
+        },
+        {
+          "level": 3,
+          "titleZh": "长忆熊",
+          "titleEn": "Long Memory",
+          "xpRequired": 750,
+          "image": "assets/pets/pet-coco-bear.jpg",
+          "perkZh": "间隔复习提醒更智能",
+          "perkEn": "Smarter spaced-repetition nudges",
+          "artStatus": "placeholder_reuse_base"
+        }
+      ]
+    }
+  ]
+}
