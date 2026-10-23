@@ -1,0 +1,9 @@
+{
+  "desc": "句窝 sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

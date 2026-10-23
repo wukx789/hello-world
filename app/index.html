@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>句窝 · 英语拼句打卡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/app.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <h1 class="brand">
+        句窝
+        <span>从短讯里拖拽拼句，带着宠物一起打卡</span>
+      </h1>
+      <div class="pet-chip" aria-live="polite">
+        <img id="pet-img" src="../assets/pets/pet-chinese-dog-s1-egg.jpg" alt="大黄" />
+        <div class="pet-meta">
+          <strong id="pet-name">大黄 · 蛋</strong>
+          <span id="pet-xp">0 XP</span>
+        </div>
+      </div>
+    </header>
+
+    <nav id="article-nav" class="article-nav" aria-label="今日短讯"></nav>
+    <section id="masthead" class="masthead" aria-live="polite"></section>
+    <div id="progress-row" class="progress-row" aria-label="句子进度"></div>
+
+    <section class="panel" aria-label="拼句练习">
+      <h3>把打散的单词拖回正确顺序</h3>
+      <p class="hint">上方是句子空格，下方是词库。拼对后会显示整句中文释义。</p>
+
+      <div id="slots" class="slots" aria-label="句子空格"></div>
+      <div id="bank" class="bank" aria-label="单词词库"></div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="check-btn">检查</button>
+        <button type="button" class="btn btn-ghost" id="reset-btn">重洗</button>
+        <button type="button" class="btn btn-ghost" id="next-btn" hidden>下一句</button>
+      </div>
+
+      <div id="feedback" class="feedback" role="status"></div>
+    </section>
+  </div>
+
+  <div id="xp-toast" class="xp-toast" aria-live="polite"></div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

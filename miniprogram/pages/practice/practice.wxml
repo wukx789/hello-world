@@ -1,0 +1,70 @@
+<view class="page">
+  <view class="pet-bar">
+    <image class="pet-img" src="{{petImage}}" mode="aspectFill" />
+    <view class="pet-meta">
+      <text class="pet-name">{{petName}}</text>
+      <text class="pet-points">{{points}} 积分</text>
+    </view>
+    <button class="checkin-btn" size="mini" bindtap="onCheckIn">每日打卡</button>
+  </view>
+
+  <view class="masthead" wx:if="{{passage}}">
+    <view class="kicker">{{passage.source}} · {{passage.section}}</view>
+    <view class="headline">{{passage.headline}}</view>
+    <view class="headline-zh">{{passage.headlineZh}}</view>
+  </view>
+
+  <view class="panel" wx:if="{{exercise}}">
+    <!-- PLAN: Chinese meaning shown by default above the exercise -->
+    <view class="zh-hint">
+      <text class="zh-label">中文提示</text>
+      <text class="zh-text">{{exercise.zh}}</text>
+    </view>
+
+    <view class="task">把打散的词拖回空格（绿色为锚点）</view>
+
+    <view class="slots">
+      <block wx:for="{{board}}" wx:key="index">
+        <view
+          class="slot {{item.isAnchor ? 'anchor' : ''}} {{item.filled ? 'filled' : ''}} {{selectedSlot === item.index ? 'selected' : ''}}"
+          data-index="{{item.index}}"
+          bindtap="onTapSlot"
+          bindtouchstart="onSlotTouchStart"
+          bindtouchend="onSlotTouchEnd"
+        >
+          <text wx:if="{{item.display}}">{{item.display}}</text>
+          <text wx:else class="placeholder">·</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="bank">
+      <block wx:for="{{bank}}" wx:key="id">
+        <view
+          class="chip {{selectedChipId === item.id ? 'selected' : ''}}"
+          data-id="{{item.id}}"
+          bindtap="onTapChip"
+          bindtouchstart="onChipTouchStart"
+          bindtouchmove="onChipTouchMove"
+          bindtouchend="onChipTouchEnd"
+        >{{item.text}}</view>
+      </block>
+    </view>
+
+    <view class="actions">
+      <button class="btn primary" bindtap="onSubmit">检查</button>
+      <button class="btn ghost" bindtap="onReset">重洗</button>
+    </view>
+
+    <view class="feedback {{feedbackType}}" wx:if="{{feedback}}">
+      <text class="feedback-title">{{feedbackTitle}}</text>
+      <text class="feedback-en" wx:if="{{revealEn}}">{{revealEn}}</text>
+      <text class="feedback-zh" wx:if="{{revealZh}}">{{revealZh}}</text>
+      <text class="feedback-note" wx:if="{{noteZh}}">{{noteZh}}</text>
+      <text class="feedback-xp" wx:if="{{gained}}">+{{gained}} 积分</text>
+    </view>
+  </view>
+
+  <view class="loading" wx:if="{{loading}}">加载短讯中…</view>
+  <view class="error" wx:if="{{error}}">{{error}}</view>
+</view>

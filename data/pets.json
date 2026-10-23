@@ -1,0 +1,386 @@
+{
+  "version": 4,
+  "theme": {
+    "style": "soft-pastel-chibi",
+    "notes": "每只宠物 5 个状态：蛋 → 破壳 → 幼体 → 少年 → 成年；打卡攒 XP 升级"
+  },
+  "xpRules": {
+    "checkInDaily": 20,
+    "streakBonusPerDay": 5,
+    "streakBonusCap": 50,
+    "vocabReview": 5,
+    "speakingPractice": 10
+  },
+  "stageLabels": [
+    { "level": 1, "titleZh": "蛋", "titleEn": "Egg" },
+    { "level": 2, "titleZh": "破壳", "titleEn": "Hatch" },
+    { "level": 3, "titleZh": "幼体", "titleEn": "Juvenile" },
+    { "level": 4, "titleZh": "少年", "titleEn": "Teen" },
+    { "level": 5, "titleZh": "成年", "titleEn": "Adult" }
+  ],
+  "pets": [
+    {
+      "id": "tugou-dog",
+      "nameZh": "大黄",
+      "nameEn": "Huang",
+      "speciesZh": "中华田园犬",
+      "speciesEn": "Chinese Rural Dog",
+      "taglineZh": "村里最勤快的打卡搭子，竖起耳朵就来学英语！",
+      "taglineEn": "The village's most loyal study buddy — ears up for English!",
+      "skillFocus": "habit",
+      "rarity": "starter",
+      "unlockCheckIns": 0,
+      "personality": ["loyal", "spirited"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "蛋",
+          "titleEn": "Egg",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-chinese-dog-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-chinese-dog-s2-hatch.jpg",
+          "perkZh": "每日打卡提醒更温柔",
+          "perkEn": "Gentle daily check-in nudges"
+        },
+        {
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-chinese-dog-s3-grow.jpg",
+          "visualNoteZh": "圆滚幼犬、软耳下垂、无配饰",
+          "perkZh": "连续打卡 XP +5%",
+          "perkEn": "+5% XP on streak days"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-chinese-dog-s4-teen.jpg",
+          "visualNoteZh": "站立抬爪、竖耳卷尾、青色围巾",
+          "perkZh": "连续打卡 XP +10%",
+          "perkEn": "+10% XP on streak days"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-chinese-dog-s5-adult.jpg",
+          "visualNoteZh": "体型更大、红项圈金星徽章",
+          "perkZh": "可冻结 1 次打卡中断",
+          "perkEn": "Freeze one missed check-in"
+        }
+      ]
+    },
+    {
+      "id": "violet-snake",
+      "nameZh": "紫紫",
+      "nameEn": "Violet",
+      "speciesZh": "词汇小蛇",
+      "speciesEn": "Vocab Snake",
+      "taglineZh": "把生词一圈圈缠牢，就不会溜走啦。",
+      "taglineEn": "I coil around new words so they stay.",
+      "skillFocus": "vocabulary",
+      "rarity": "starter",
+      "unlockCheckIns": 0,
+      "personality": ["curious", "clever"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "蛋",
+          "titleEn": "Egg",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-purple-snake-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-purple-snake-s2-hatch.jpg",
+          "perkZh": "记单词提示更轻快",
+          "perkEn": "Lighter vocab reminders"
+        },
+        {
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-purple-snake-s3-grow.jpg",
+          "perkZh": "词汇复习 XP +5%",
+          "perkEn": "+5% XP from vocab reviews"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-purple-snake-s4-teen.jpg",
+          "perkZh": "词汇复习 XP +10%",
+          "perkEn": "+10% XP from vocab reviews"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-purple-snake-s5-adult.jpg",
+          "perkZh": "生词本正确率奖励提升",
+          "perkEn": "Better accuracy bonus on new words"
+        }
+      ]
+    },
+    {
+      "id": "pink-bun",
+      "nameZh": "桃桃",
+      "nameEn": "Peach",
+      "speciesZh": "口语粉兔",
+      "speciesEn": "Speak Bunny",
+      "taglineZh": "粉粉耳朵竖起来，开口练习不怕羞。",
+      "taglineEn": "Pink ears up — say it out loud!",
+      "skillFocus": "speaking",
+      "rarity": "common",
+      "unlockCheckIns": 3,
+      "personality": ["brave", "gentle"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "蛋",
+          "titleEn": "Egg",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-pink-bunny-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-pink-bunny-s2-hatch.jpg",
+          "perkZh": "口语跟读更有陪伴感",
+          "perkEn": "Companion feel for speaking drills"
+        },
+        {
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-pink-bunny-s3-grow.jpg",
+          "perkZh": "口语练习 XP +5%",
+          "perkEn": "+5% XP from speaking"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-pink-bunny-s4-teen.jpg",
+          "perkZh": "口语练习 XP +10%",
+          "perkEn": "+10% XP from speaking"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-pink-bunny-s5-adult.jpg",
+          "perkZh": "连续开口打卡额外徽章",
+          "perkEn": "Streak badge for speaking days"
+        }
+      ]
+    },
+    {
+      "id": "pip-chick",
+      "nameZh": "叽叽",
+      "nameEn": "Chirp",
+      "speciesZh": "听力小鸡",
+      "speciesEn": "Listen Chick",
+      "taglineZh": "小小耳朵竖起来，英语一点一点听进心。",
+      "taglineEn": "Tiny ears, big listening wins.",
+      "skillFocus": "listening",
+      "rarity": "common",
+      "unlockCheckIns": 5,
+      "personality": ["lively", "attentive"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "蛋",
+          "titleEn": "Egg",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-chick-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-chick-s2-hatch.jpg",
+          "perkZh": "短听力打卡更轻快",
+          "perkEn": "Quick listening check-ins"
+        },
+        {
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-chick-s3-grow.jpg",
+          "perkZh": "听力练习 XP +5%",
+          "perkEn": "+5% XP from listening"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-chick-s4-teen.jpg",
+          "perkZh": "听力练习 XP +10%",
+          "perkEn": "+10% XP from listening"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-chick-s5-adult.jpg",
+          "perkZh": "听写正确率奖励提升",
+          "perkEn": "Better dictation accuracy bonus"
+        }
+      ]
+    },
+    {
+      "id": "snow-kitten",
+      "nameZh": "雪团",
+      "nameEn": "Snow",
+      "speciesZh": "语法白猫",
+      "speciesEn": "Grammar Kitten",
+      "taglineZh": "把句子揉得软软的，再慢慢排整齐。",
+      "taglineEn": "I knead sentences until they feel just right.",
+      "skillFocus": "grammar",
+      "rarity": "common",
+      "unlockCheckIns": 7,
+      "personality": ["calm", "clever"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "蛋",
+          "titleEn": "Egg",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-white-kitten-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-white-kitten-s2-hatch.jpg",
+          "perkZh": "语法纠错提示更友好",
+          "perkEn": "Friendlier grammar tips"
+        },
+        {
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-white-kitten-s3-grow.jpg",
+          "perkZh": "语法练习 XP +5%",
+          "perkEn": "+5% XP from grammar drills"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-white-kitten-s4-teen.jpg",
+          "perkZh": "语法练习 XP +10%",
+          "perkEn": "+10% XP from grammar drills"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-white-kitten-s5-adult.jpg",
+          "perkZh": "长句练习额外奖励",
+          "perkEn": "Bonus XP for long-sentence practice"
+        }
+      ]
+    },
+    {
+      "id": "nibble-hamster",
+      "nameZh": "豆豆",
+      "nameEn": "Nibble",
+      "speciesZh": "记忆仓鼠",
+      "speciesEn": "Memory Hamster",
+      "taglineZh": "把单词塞进腮帮子，慢慢嚼、慢慢记。",
+      "taglineEn": "I stuff words in my cheeks and chew them into memory.",
+      "skillFocus": "retention",
+      "rarity": "common",
+      "unlockCheckIns": 10,
+      "personality": ["busy", "patient"],
+      "stages": [
+        {
+          "level": 1,
+          "titleZh": "蛋",
+          "titleEn": "Egg",
+          "xpRequired": 0,
+          "image": "assets/pets/pet-hamster-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-hamster-s2-hatch.jpg",
+          "perkZh": "错词本复习更安心",
+          "perkEn": "Softer revisit of missed words"
+        },
+        {
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-hamster-s3-grow.jpg",
+          "perkZh": "复习 XP +5%",
+          "perkEn": "+5% XP from reviews"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-hamster-s4-teen.jpg",
+          "perkZh": "复习 XP +15%",
+          "perkEn": "+15% XP from reviews"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-hamster-s5-adult.jpg",
+          "perkZh": "间隔复习提醒更智能",
+          "perkEn": "Smarter spaced-repetition nudges"
+        }
+      ]
+    }
+  ]
+}

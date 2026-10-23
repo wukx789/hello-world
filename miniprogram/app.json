@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/practice/practice"
+  ],
+  "window": {
+    "navigationBarTitleText": "句窝",
+    "navigationBarBackgroundColor": "#155652",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#e7f2ef"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

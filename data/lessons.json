@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "product": {
+    "nameZh": "句窝",
+    "nameEn": "Sentence Nest",
+    "taglineZh": "从一篇短讯里拼出一句英语，带着宠物一起打卡。",
+    "taglineEn": "Rebuild one sentence from a short dispatch — check in with your pet."
+  },
+  "contentNote": "Demo articles are original newspaper-style copy for the prototype. Production should use licensed feeds or partner content — do not scrape copyrighted papers verbatim.",
+  "xp": {
+    "sentenceCorrect": 20,
+    "articleCompleteBonus": 30,
+    "firstTryBonus": 10
+  },
+  "articles": [
+    {
+      "id": "city-bike-lanes-2026",
+      "source": "City Morning Dispatch",
+      "section": "Local",
+      "headline": "City expands weekend bike lanes along the river",
+      "headlineZh": "本市沿河增设周末自行车道",
+      "dek": "Officials say the pilot will run through spring before a wider rollout.",
+      "dekZh": "官方表示试点将持续到春天，再决定是否扩大。",
+      "sentences": [
+        {
+          "id": "s1",
+          "en": "The city will open new bike lanes along the river this weekend.",
+          "zh": "本市将于本周末沿河开放新的自行车道。",
+          "noteZh": "will open = 将要开放；along the river = 沿着河。"
+        },
+        {
+          "id": "s2",
+          "en": "Local riders hope the pilot becomes a permanent route.",
+          "zh": "当地骑行者希望这次试点能变成永久路线。",
+          "noteZh": "hope + 从句；permanent = 永久的。"
+        },
+        {
+          "id": "s3",
+          "en": "Shops near the path expect more visitors on sunny days.",
+          "zh": "小路附近的店铺预计晴天会迎来更多访客。",
+          "noteZh": "expect = 预计；on sunny days = 在晴天。"
+        }
+      ]
+    },
+    {
+      "id": "library-late-hours",
+      "source": "Metro Brief",
+      "section": "Culture",
+      "headline": "Central library tests late study hours for students",
+      "headlineZh": "中心图书馆试行学生晚间自习开放",
+      "dek": "Quiet floors stay open until eleven on weeknights during exam season.",
+      "dekZh": "考试季工作日晚间，安静楼层开放至十一点。",
+      "sentences": [
+        {
+          "id": "s1",
+          "en": "The central library will stay open until eleven on weeknights.",
+          "zh": "中心图书馆工作日晚上将开放到十一点。",
+          "noteZh": "stay open = 保持开放；weeknights = 工作日夜晚。"
+        },
+        {
+          "id": "s2",
+          "en": "Students can reserve quiet desks online before they arrive.",
+          "zh": "学生可以在到达前在线预约安静座位。",
+          "noteZh": "reserve = 预约；before they arrive = 在他们到达之前。"
+        },
+        {
+          "id": "s3",
+          "en": "Staff say the trial helps more people finish evening study plans.",
+          "zh": "工作人员表示，试行能帮助更多人完成晚间学习计划。",
+          "noteZh": "trial = 试行；finish ... plans = 完成……计划。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+page {
+  --ink: #1c2a26;
+  --muted: #5a6b64;
+  --sea: #1f6f6a;
+  --sea-deep: #155652;
+  --coral: #d66a4e;
+  --paper: #f7f1e6;
+  --ok: #2f7d4a;
+  --bad: #b33b3b;
+  background: linear-gradient(165deg, #e7f2ef 0%, #f7f1e6 55%, #f3e8d8 100%);
+  color: var(--ink);
+  font-size: 28rpx;
+  min-height: 100%;
+}
