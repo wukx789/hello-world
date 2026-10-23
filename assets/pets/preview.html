@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>英语打卡 · 宠物图鉴</title>
+  <title>英语打卡 · 宠物五阶段</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
@@ -38,76 +38,91 @@
     }
     header p {
       margin: 0.6rem auto 0;
-      max-width: 28rem;
+      max-width: 32rem;
       color: var(--muted);
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.25rem;
-      padding: 1.5rem clamp(1rem, 4vw, 3rem) 3rem;
+    .pet {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
+      padding: 0 clamp(1rem, 4vw, 3rem);
     }
-    article {
-      background: rgba(255, 255, 255, 0.55);
-      border-radius: 1.25rem;
-      padding: 1rem 1rem 1.25rem;
-      backdrop-filter: blur(6px);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    article:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(42, 58, 54, 0.12);
-    }
-    article img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 0.9rem;
-      display: block;
-      background: #fff;
-    }
-    article h2 {
-      margin: 0.85rem 0 0.2rem;
-      font-size: 1.15rem;
+    .pet h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.25rem;
       font-weight: 800;
     }
-    article .en {
+    .pet .en {
       color: var(--accent);
       font-size: 0.9rem;
       font-weight: 600;
+      margin-bottom: 0.85rem;
     }
-    article .tag {
-      margin: 0.55rem 0 0;
-      font-size: 0.85rem;
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.65rem;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .stages { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .stages { grid-template-columns: repeat(2, 1fr); }
+    }
+    figure {
+      margin: 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 1rem;
+      padding: 0.55rem;
+      backdrop-filter: blur(4px);
+    }
+    figure img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      background: #fff;
+      display: block;
+    }
+    figcaption {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
       color: var(--muted);
-      line-height: 1.4;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>英语打卡 · 宠物图鉴</h1>
-    <p>中华田园犬、紫蛇、粉兔、小鸡仔、白猫、仓鼠 —— 打卡攒 XP，一起升级。</p>
+    <h1>英语打卡 · 五阶段成长</h1>
+    <p>蛋 → 破壳 → 幼体 → 少年 → 成年。打卡攒 XP，宠物一步步长大。</p>
   </header>
-  <section class="grid" id="roster" aria-label="宠物名单"></section>
+  <div id="root"></div>
   <script>
+    const labels = ["蛋", "破壳", "幼体", "少年", "成年"];
     const pets = [
-      { img: "pet-chinese-dog.jpg", zh: "大黄", en: "Huang · 中华田园犬", tag: "村里最勤快的打卡搭子，竖起耳朵就来学英语！" },
-      { img: "pet-purple-snake.jpg", zh: "紫紫", en: "Violet · 词汇小蛇", tag: "把生词一圈圈缠牢，就不会溜走啦。" },
-      { img: "pet-pink-bunny.jpg", zh: "桃桃", en: "Peach · 口语粉兔", tag: "粉粉耳朵竖起来，开口练习不怕羞。" },
-      { img: "pet-chick.jpg", zh: "叽叽", en: "Chirp · 听力小鸡", tag: "小小耳朵竖起来，英语一点一点听进心。" },
-      { img: "pet-white-kitten.jpg", zh: "雪团", en: "Snow · 语法白猫", tag: "把句子揉得软软的，再慢慢排整齐。" },
-      { img: "pet-hamster.jpg", zh: "豆豆", en: "Nibble · 记忆仓鼠", tag: "把单词塞进腮帮子，慢慢嚼、慢慢记。" }
+      { zh: "大黄", en: "Huang · 中华田园犬", base: "pet-chinese-dog" },
+      { zh: "紫紫", en: "Violet · 词汇小蛇", base: "pet-purple-snake" },
+      { zh: "桃桃", en: "Peach · 口语粉兔", base: "pet-pink-bunny" },
+      { zh: "叽叽", en: "Chirp · 听力小鸡", base: "pet-chick" },
+      { zh: "雪团", en: "Snow · 语法白猫", base: "pet-white-kitten" },
+      { zh: "豆豆", en: "Nibble · 记忆仓鼠", base: "pet-hamster" }
     ];
-    document.getElementById("roster").innerHTML = pets.map((p) => `
-      <article>
-        <img src="${p.img}" alt="${p.zh}" loading="lazy" />
+    const suffixes = ["s1-egg", "s2-hatch", "s3-grow", "s4-teen", "s5-adult"];
+    document.getElementById("root").innerHTML = pets.map((p) => `
+      <section class="pet">
         <h2>${p.zh}</h2>
         <div class="en">${p.en}</div>
-        <p class="tag">${p.tag}</p>
-      </article>
+        <div class="stages">
+          ${suffixes.map((s, i) => `
+            <figure>
+              <img src="${p.base}-${s}.jpg" alt="${p.zh} ${labels[i]}" loading="lazy" />
+              <figcaption>Lv.${i + 1} ${labels[i]}</figcaption>
+            </figure>
+          `).join("")}
+        </div>
+      </section>
     `).join("");
   </script>
 </body>

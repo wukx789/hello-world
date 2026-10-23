@@ -1,8 +1,8 @@
 {
-  "version": 3,
+  "version": 4,
   "theme": {
     "style": "soft-pastel-chibi",
-    "notes": "统一圆润 Q 版插画；打卡获得 XP，累计后切换 stage 形象"
+    "notes": "每只宠物 5 个状态：蛋 → 破壳 → 幼体 → 少年 → 成年；打卡攒 XP 升级"
   },
   "xpRules": {
     "checkInDaily": 20,
@@ -11,6 +11,13 @@
     "vocabReview": 5,
     "speakingPractice": 10
   },
+  "stageLabels": [
+    { "level": 1, "titleZh": "蛋", "titleEn": "Egg" },
+    { "level": 2, "titleZh": "破壳", "titleEn": "Hatch" },
+    { "level": 3, "titleZh": "幼体", "titleEn": "Juvenile" },
+    { "level": 4, "titleZh": "少年", "titleEn": "Teen" },
+    { "level": 5, "titleZh": "成年", "titleEn": "Adult" }
+  ],
   "pets": [
     {
       "id": "tugou-dog",
@@ -27,32 +34,48 @@
       "stages": [
         {
           "level": 1,
-          "titleZh": "小土狗",
-          "titleEn": "Village Pup",
+          "titleZh": "蛋",
+          "titleEn": "Egg",
           "xpRequired": 0,
-          "image": "assets/pets/pet-chinese-dog.jpg",
-          "perkZh": "每日打卡更有陪伴感",
-          "perkEn": "Companion feel for daily check-ins"
+          "image": "assets/pets/pet-chinese-dog-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
         },
         {
           "level": 2,
-          "titleZh": "看家犬",
-          "titleEn": "Yard Guard",
-          "xpRequired": 200,
-          "image": "assets/pets/pet-chinese-dog.jpg",
-          "perkZh": "连续打卡 XP +10%",
-          "perkEn": "+10% XP on streak days",
-          "artStatus": "placeholder_reuse_base"
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-chinese-dog-s2-hatch.jpg",
+          "perkZh": "每日打卡提醒更温柔",
+          "perkEn": "Gentle daily check-in nudges"
         },
         {
           "level": 3,
-          "titleZh": "金牌田园",
-          "titleEn": "Gold Yard Dog",
-          "xpRequired": 600,
-          "image": "assets/pets/pet-chinese-dog.jpg",
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-chinese-dog-s3-grow.jpg",
+          "perkZh": "连续打卡 XP +5%",
+          "perkEn": "+5% XP on streak days"
+        },
+        {
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-chinese-dog-s4-teen.jpg",
+          "perkZh": "连续打卡 XP +10%",
+          "perkEn": "+10% XP on streak days"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-chinese-dog-s5-adult.jpg",
           "perkZh": "可冻结 1 次打卡中断",
-          "perkEn": "Freeze one missed check-in",
-          "artStatus": "placeholder_reuse_base"
+          "perkEn": "Freeze one missed check-in"
         }
       ]
     },
@@ -71,32 +94,48 @@
       "stages": [
         {
           "level": 1,
-          "titleZh": "小紫蛇",
-          "titleEn": "Lil Violet",
+          "titleZh": "蛋",
+          "titleEn": "Egg",
           "xpRequired": 0,
-          "image": "assets/pets/pet-purple-snake.jpg",
+          "image": "assets/pets/pet-purple-snake-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-purple-snake-s2-hatch.jpg",
           "perkZh": "记单词提示更轻快",
           "perkEn": "Lighter vocab reminders"
         },
         {
-          "level": 2,
-          "titleZh": "缠词蛇",
-          "titleEn": "Word Coil",
-          "xpRequired": 200,
-          "image": "assets/pets/pet-purple-snake.jpg",
-          "perkZh": "词汇复习 XP +10%",
-          "perkEn": "+10% XP from vocab reviews",
-          "artStatus": "placeholder_reuse_base"
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-purple-snake-s3-grow.jpg",
+          "perkZh": "词汇复习 XP +5%",
+          "perkEn": "+5% XP from vocab reviews"
         },
         {
-          "level": 3,
-          "titleZh": "星紫蛇",
-          "titleEn": "Star Violet",
-          "xpRequired": 600,
-          "image": "assets/pets/pet-purple-snake.jpg",
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-purple-snake-s4-teen.jpg",
+          "perkZh": "词汇复习 XP +10%",
+          "perkEn": "+10% XP from vocab reviews"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-purple-snake-s5-adult.jpg",
           "perkZh": "生词本正确率奖励提升",
-          "perkEn": "Better accuracy bonus on new words",
-          "artStatus": "placeholder_reuse_base"
+          "perkEn": "Better accuracy bonus on new words"
         }
       ]
     },
@@ -115,32 +154,48 @@
       "stages": [
         {
           "level": 1,
-          "titleZh": "粉团兔",
-          "titleEn": "Pink Fluff",
+          "titleZh": "蛋",
+          "titleEn": "Egg",
           "xpRequired": 0,
-          "image": "assets/pets/pet-pink-bunny.jpg",
+          "image": "assets/pets/pet-pink-bunny-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-pink-bunny-s2-hatch.jpg",
           "perkZh": "口语跟读更有陪伴感",
           "perkEn": "Companion feel for speaking drills"
         },
         {
-          "level": 2,
-          "titleZh": "朗读者",
-          "titleEn": "Reader Bun",
-          "xpRequired": 220,
-          "image": "assets/pets/pet-pink-bunny.jpg",
-          "perkZh": "口语练习 XP +10%",
-          "perkEn": "+10% XP from speaking",
-          "artStatus": "placeholder_reuse_base"
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-pink-bunny-s3-grow.jpg",
+          "perkZh": "口语练习 XP +5%",
+          "perkEn": "+5% XP from speaking"
         },
         {
-          "level": 3,
-          "titleZh": "舞台兔",
-          "titleEn": "Stage Peach",
-          "xpRequired": 650,
-          "image": "assets/pets/pet-pink-bunny.jpg",
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-pink-bunny-s4-teen.jpg",
+          "perkZh": "口语练习 XP +10%",
+          "perkEn": "+10% XP from speaking"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-pink-bunny-s5-adult.jpg",
           "perkZh": "连续开口打卡额外徽章",
-          "perkEn": "Streak badge for speaking days",
-          "artStatus": "placeholder_reuse_base"
+          "perkEn": "Streak badge for speaking days"
         }
       ]
     },
@@ -159,32 +214,48 @@
       "stages": [
         {
           "level": 1,
-          "titleZh": "小鸡仔",
-          "titleEn": "Chick",
+          "titleZh": "蛋",
+          "titleEn": "Egg",
           "xpRequired": 0,
-          "image": "assets/pets/pet-chick.jpg",
+          "image": "assets/pets/pet-chick-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-chick-s2-hatch.jpg",
           "perkZh": "短听力打卡更轻快",
           "perkEn": "Quick listening check-ins"
         },
         {
-          "level": 2,
-          "titleZh": "跃听鸡",
-          "titleEn": "Hop Listener",
-          "xpRequired": 220,
-          "image": "assets/pets/pet-chick.jpg",
-          "perkZh": "听力练习 XP +10%",
-          "perkEn": "+10% XP from listening",
-          "artStatus": "placeholder_reuse_base"
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-chick-s3-grow.jpg",
+          "perkZh": "听力练习 XP +5%",
+          "perkEn": "+5% XP from listening"
         },
         {
-          "level": 3,
-          "titleZh": "风语鸡",
-          "titleEn": "Wind Chirp",
-          "xpRequired": 650,
-          "image": "assets/pets/pet-chick.jpg",
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-chick-s4-teen.jpg",
+          "perkZh": "听力练习 XP +10%",
+          "perkEn": "+10% XP from listening"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-chick-s5-adult.jpg",
           "perkZh": "听写正确率奖励提升",
-          "perkEn": "Better dictation accuracy bonus",
-          "artStatus": "placeholder_reuse_base"
+          "perkEn": "Better dictation accuracy bonus"
         }
       ]
     },
@@ -203,32 +274,48 @@
       "stages": [
         {
           "level": 1,
-          "titleZh": "小白猫",
-          "titleEn": "White Kitten",
+          "titleZh": "蛋",
+          "titleEn": "Egg",
           "xpRequired": 0,
-          "image": "assets/pets/pet-white-kitten.jpg",
+          "image": "assets/pets/pet-white-kitten-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-white-kitten-s2-hatch.jpg",
           "perkZh": "语法纠错提示更友好",
           "perkEn": "Friendlier grammar tips"
         },
         {
-          "level": 2,
-          "titleZh": "眼镜猫",
-          "titleEn": "Spectacles Cat",
-          "xpRequired": 240,
-          "image": "assets/pets/pet-white-kitten.jpg",
-          "perkZh": "语法练习 XP +10%",
-          "perkEn": "+10% XP from grammar drills",
-          "artStatus": "placeholder_reuse_base"
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-white-kitten-s3-grow.jpg",
+          "perkZh": "语法练习 XP +5%",
+          "perkEn": "+5% XP from grammar drills"
         },
         {
-          "level": 3,
-          "titleZh": "雪冕猫",
-          "titleEn": "Snow Crown",
-          "xpRequired": 700,
-          "image": "assets/pets/pet-white-kitten.jpg",
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-white-kitten-s4-teen.jpg",
+          "perkZh": "语法练习 XP +10%",
+          "perkEn": "+10% XP from grammar drills"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-white-kitten-s5-adult.jpg",
           "perkZh": "长句练习额外奖励",
-          "perkEn": "Bonus XP for long-sentence practice",
-          "artStatus": "placeholder_reuse_base"
+          "perkEn": "Bonus XP for long-sentence practice"
         }
       ]
     },
@@ -247,32 +334,48 @@
       "stages": [
         {
           "level": 1,
-          "titleZh": "小仓鼠",
-          "titleEn": "Lil Hamster",
+          "titleZh": "蛋",
+          "titleEn": "Egg",
           "xpRequired": 0,
-          "image": "assets/pets/pet-hamster.jpg",
+          "image": "assets/pets/pet-hamster-s1-egg.jpg",
+          "perkZh": "孵化中：完成首次打卡可破壳",
+          "perkEn": "Incubating — first check-in helps hatch"
+        },
+        {
+          "level": 2,
+          "titleZh": "破壳",
+          "titleEn": "Hatch",
+          "xpRequired": 40,
+          "image": "assets/pets/pet-hamster-s2-hatch.jpg",
           "perkZh": "错词本复习更安心",
           "perkEn": "Softer revisit of missed words"
         },
         {
-          "level": 2,
-          "titleZh": "囤词鼠",
-          "titleEn": "Word Hoarder",
-          "xpRequired": 260,
-          "image": "assets/pets/pet-hamster.jpg",
-          "perkZh": "复习 XP +15%",
-          "perkEn": "+15% XP from reviews",
-          "artStatus": "placeholder_reuse_base"
+          "level": 3,
+          "titleZh": "幼体",
+          "titleEn": "Juvenile",
+          "xpRequired": 120,
+          "image": "assets/pets/pet-hamster-s3-grow.jpg",
+          "perkZh": "复习 XP +5%",
+          "perkEn": "+5% XP from reviews"
         },
         {
-          "level": 3,
-          "titleZh": "长忆鼠",
-          "titleEn": "Long Memory",
-          "xpRequired": 750,
-          "image": "assets/pets/pet-hamster.jpg",
+          "level": 4,
+          "titleZh": "少年",
+          "titleEn": "Teen",
+          "xpRequired": 280,
+          "image": "assets/pets/pet-hamster-s4-teen.jpg",
+          "perkZh": "复习 XP +15%",
+          "perkEn": "+15% XP from reviews"
+        },
+        {
+          "level": 5,
+          "titleZh": "成年",
+          "titleEn": "Adult",
+          "xpRequired": 560,
+          "image": "assets/pets/pet-hamster-s5-adult.jpg",
           "perkZh": "间隔复习提醒更智能",
-          "perkEn": "Smarter spaced-repetition nudges",
-          "artStatus": "placeholder_reuse_base"
+          "perkEn": "Smarter spaced-repetition nudges"
         }
       ]
     }
