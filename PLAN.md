@@ -150,3 +150,17 @@
 
 - 架构或范围变更时 **增补本节与 Gaps**，避免另起平行文档导致双源  
 - 交互规格确定后另开 `INTERACTIONS.md`（或等价），不回填进本文件的延后承诺
+
+---
+
+## 8. 实现进度（竖切）
+
+已开工，首条竖切目录：
+
+| 路径 | 状态 |
+|------|------|
+| `server/` | Node HTTPS 前的本地 API：`/api/passage` `/api/pet` `/api/exercise/submit` `/api/checkin`；fixture 新闻 + 规则选句 + POS 启发式锚点 |
+| `miniprogram/` | 微信小程序工程；练习页：中文默认置顶、点选填空、答错揭示正解、打卡加分 |
+| `server/dev-harness.html` | 云端/无开发者工具时的 API 竖切验证页（`/dev`） |
+
+未决仍见 §5（真实新闻源、AppID、真 POS、持久化等）。小程序预览需本机微信开发者工具。

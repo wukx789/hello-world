@@ -1,0 +1,31 @@
+{
+  "note": "Original fixture copy for the vertical slice. Swap for authorized RSS/API via content adapters — do not scrape copyrighted papers.",
+  "fetchedAt": "2026-10-23T12:00:00Z",
+  "articles": [
+    {
+      "id": "fixture-river-lanes",
+      "source": "City Morning Dispatch",
+      "section": "Local",
+      "headline": "City expands weekend bike lanes along the river",
+      "headlineZh": "本市沿河增设周末自行车道",
+      "dek": "Officials say the pilot will run through spring before a wider rollout.",
+      "body": [
+        {
+          "en": "The city will open new bike lanes along the river this weekend.",
+          "zh": "本市将于本周末沿河开放新的自行车道。",
+          "noteZh": "will open = 将要开放；along the river = 沿着河。"
+        },
+        {
+          "en": "Local riders hope the pilot becomes a permanent route.",
+          "zh": "当地骑行者希望这次试点能变成永久路线。",
+          "noteZh": "hope + 从句；permanent = 永久的。"
+        },
+        {
+          "en": "Shops near the path expect more visitors on sunny days.",
+          "zh": "小路附近的店铺预计晴天会迎来更多访客。",
+          "noteZh": "expect = 预计；on sunny days = 在晴天。"
+        }
+      ]
+    }
+  ]
+}

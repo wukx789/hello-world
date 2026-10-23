@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>句窝 · API 竖切验证</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; background: #eef5f2; color: #1c2a26; }
+    .card { background: #fff; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .zh { background: #f7f1e6; padding: .75rem 1rem; border-radius: 8px; font-weight: 650; }
+    .slots, .bank { display: flex; flex-wrap: wrap; gap: .4rem; margin: .75rem 0; }
+    .slot, .chip { padding: .4rem .65rem; border-radius: 8px; background: #fff; border: 1px dashed #9bb; cursor: pointer; }
+    .slot.anchor { background: #d9ebe8; border-style: solid; cursor: default; }
+    .slot.filled:not(.anchor) { border-style: solid; }
+    button { margin-right: .5rem; padding: .5rem 1rem; border: 0; border-radius: 999px; background: #1f6f6a; color: #fff; font-weight: 700; cursor: pointer; }
+    .bad { color: #b33b3b; } .ok { color: #2f7d4a; }
+  </style>
+</head>
+<body>
+  <h1>句窝竖切 · Dev Harness</h1>
+  <p>模拟小程序：拉 passage → 中文置顶 → 点选填空 → 检查 / 答错给正解 → 积分。</p>
+  <div class="card" id="pet">宠物加载中…</div>
+  <div class="card" id="main">加载中…</div>
+  <script>
+    const state = { passage: null, board: [], bank: [], selectedChip: null, attempts: 0 };
+
+    async function api(path, opts = {}) {
+      const res = await fetch(path, {
+        ...opts,
+        headers: { "Content-Type": "application/json", "X-User-Id": "demo-harness", ...(opts.headers || {}) },
+        body: opts.body ? JSON.stringify(opts.body) : undefined,
+      });
+      return res.json();
+    }
+
+    function renderPet(pet) {
+      document.getElementById("pet").innerHTML = `<strong>${pet.nameZh} · ${pet.stage.titleZh}</strong> · ${pet.points} 积分
+        <div><button onclick="doCheckin()">每日打卡</button></div>`;
+    }
+
+    function render() {
+      const ex = state.passage.exercises[0];
+      const slots = state.board.map((s, i) =>
+        `<div class="slot ${s.isAnchor ? "anchor" : ""} ${s.filled ? "filled" : ""}" data-i="${i}">${s.display || "·"}</div>`
+      ).join("");
+      const bank = state.bank.map((c) =>
+        `<div class="chip" data-id="${c.id}">${c.text}</div>`
+      ).join("");
+      document.getElementById("main").innerHTML = `
+        <div><small>${state.passage.source}</small></div>
+        <h2>${state.passage.headline}</h2>
+        <div class="zh">${ex.zh}</div>
+        <div class="slots">${slots}</div>
+        <div class="bank">${bank}</div>
+        <button onclick="submitAns()">检查</button>
+        <button onclick="boot()" style="background:#555">重载</button>
+        <div id="fb"></div>`;
+      document.querySelectorAll(".chip").forEach((el) => el.onclick = () => pickChip(el.dataset.id));
+      document.querySelectorAll(".slot").forEach((el) => el.onclick = () => pickSlot(Number(el.dataset.i)));
+    }
+
+    function pickChip(id) {
+      const empty = state.board.findIndex((s) => !s.isAnchor && !s.filled);
+      if (empty >= 0) place(id, empty);
+      else state.selectedChip = id;
+    }
+
+    function pickSlot(i) {
+      const s = state.board[i];
+      if (s.isAnchor) return;
+      if (s.filled) {
+        state.bank.push({ id: s.chipId, text: s.display });
+        s.filled = false; s.chipId = ""; s.display = "";
+        render(); return;
+      }
+      if (state.selectedChip) { place(state.selectedChip, i); state.selectedChip = null; }
+    }
+
+    function place(id, i) {
+      const chip = state.bank.find((c) => c.id === id);
+      if (!chip) return;
+      state.bank = state.bank.filter((c) => c.id !== id);
+      state.board[i] = { ...state.board[i], filled: true, chipId: id, display: chip.text };
+      render();
+    }
+
+    async function submitAns() {
+      const ex = state.passage.exercises[0];
+      if (state.board.some((s) => !s.filled)) {
+        document.getElementById("fb").innerHTML = `<p class="bad">先填满</p>`;
+        return;
+      }
+      state.attempts += 1;
+      const result = await api("/api/exercise/submit", {
+        method: "POST",
+        body: {
+          passageId: state.passage.passageId,
+          exerciseId: ex.id || "s1",
+          exerciseKey: state.passage.passageId + ":" + (ex.id || "s1"),
+          expectedEn: ex.en,
+          expectedZh: ex.zh,
+          noteZh: ex.noteZh,
+          answerTokens: state.board.map((s) => s.display),
+          firstTry: state.attempts === 1,
+        },
+      });
+      renderPet(result.pet);
+      const cls = result.correct ? "ok" : "bad";
+      const title = result.correct ? "拼对了" : "不太对，正确答案是：";
+      document.getElementById("fb").innerHTML = `<p class="${cls}"><strong>${title}</strong><br>${result.revealEn}<br>${result.revealZh}${result.gained ? `<br>+${result.gained}` : ""}</p>`;
+    }
+
+    async function doCheckin() {
+      const r = await api("/api/checkin", { method: "POST", body: {} });
+      renderPet(r.pet);
+      alert(r.alreadyCheckedIn ? "今天已打过卡" : "+" + r.gained);
+    }
+
+    async function boot() {
+      const [passage, pet] = await Promise.all([api("/api/passage"), api("/api/pet")]);
+      state.passage = passage;
+      state.attempts = 0;
+      const ex = passage.exercises[0];
+      state.board = ex.slots.map((s) => ({
+        isAnchor: s.isAnchor, filled: s.isAnchor, display: s.isAnchor ? s.text : "", chipId: s.isAnchor ? "a" : "",
+      }));
+      state.bank = ex.bank.map((b) => ({ ...b }));
+      renderPet(pet);
+      render();
+    }
+    boot();
+  </script>
+</body>
+</html>
